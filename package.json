@@ -5,7 +5,8 @@
   "main": "bin/games.js",
   "bin": {
     "games": "bin/games.js",
-    "game-even": "bin/game-even.js"
+    "game-even": "bin/game-even.js",
+    "game-calc": "bin/game-calc.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
