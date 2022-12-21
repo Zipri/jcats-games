@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import { welcome } from './common-functions.js';
 
-console.log('Welcome to the Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
+welcome();

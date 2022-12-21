@@ -1,14 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
-const log = (i) => console.log(i);
-
-const welcome = () => {
-  log('Welcome to the Games!');
-  const name = readlineSync.question('May I have your name? ');
-  log(`Hello, ${name}!`);
-  return name;
-};
+import { log, welcome } from './common-functions.js';
 
 const game = (name) => {
   log('Answer "yes" if the number is even, otherwise answer "no".');
