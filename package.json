@@ -1,0 +1,26 @@
+{
+  "name": "@jcat/code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/games.js",
+  "bin": {
+    "games": "bin/games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "games"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zipri/jcats-games.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Zipri/jcats-games/issues"
+  },
+  "homepage": "https://github.com/Zipri/jcats-games#readme"
+}
