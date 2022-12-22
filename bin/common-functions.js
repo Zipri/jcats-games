@@ -21,6 +21,11 @@ export const isTaskComplete = (question, result, name) => {
   return false;
 };
 
+export const start = (game) => {
+  const name = welcome();
+  game(name);
+};
+
 // export const game = (name, greetings, result, question) => {
 //   log(greetings);
 //   let correctAnswers = 0;

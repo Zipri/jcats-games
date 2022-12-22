@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { isTaskComplete, log, welcome } from './common-functions.js';
+import { isTaskComplete, log, start } from './common-functions.js';
 
 const operation = () => {
   const operations = ['+', '-', '*'];
@@ -25,9 +25,4 @@ const game = (name) => {
   if (correctAnswers === 3) log(`Congratulations, ${name}!`);
 };
 
-const start = () => {
-  const name = welcome();
-  game(name);
-};
-
-start();
+start(game);
