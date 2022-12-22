@@ -2,9 +2,9 @@
 import { isTaskComplete, log, start } from './common-functions.js';
 
 const isPrime = (n) => {
-  for (let i = 2; i < n; i += 1) if (n % i === 0) return 'no'
-  return 'yes'
-}
+  for (let i = 2; i < n; i += 1) if (n % i === 0) return 'no';
+  return 'yes';
+};
 
 const game = (name) => {
   log('Answer "yes" if given number is prime. Otherwise answer "no".');
