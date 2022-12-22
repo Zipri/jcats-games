@@ -8,3 +8,15 @@ export const welcome = () => {
   log(`Hello, ${name}!`);
   return name;
 };
+
+export const isTaskComplete = (question, result, name) => {
+  log(question);
+  const answer = readlineSync.question('Your answer: ');
+  if (answer.toString() === result.toString()) {
+    log('Correct!');
+    return true;
+  }
+  log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+  log(`Let's try again, ${name}!`);
+  return false;
+};

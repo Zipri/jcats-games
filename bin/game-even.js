@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import { log, welcome } from './common-functions.js';
+import { isTaskComplete, log, welcome } from './common-functions.js';
 
 const game = (name) => {
   log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -8,14 +7,9 @@ const game = (name) => {
   while (correctAnswers < 3) {
     const questionNumber = Math.floor(Math.random() * 100);
     const correctAnswer = questionNumber % 2 === 0 ? 'yes' : 'no';
-    log(`Question: ${questionNumber}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer.toLowerCase() === correctAnswer) {
-      log('Correct!');
+    if (isTaskComplete(`Question: ${questionNumber}`, correctAnswer, name)) {
       correctAnswers += 1;
     } else {
-      log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      log(`Let's try again, ${name}!`);
       correctAnswers = 100;
     }
   }
